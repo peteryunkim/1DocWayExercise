@@ -3,10 +3,7 @@ import React from 'react'
 class AppointmentInfo extends React.Component{
 
 componentDidMount(){
-let today = new Date()
-let apptDate = this.props.info.checkup
-console.log(today, apptDate)
-console.log(this.props)
+
 }
 
 // class AppointmentInfo extends React.Component{
@@ -21,9 +18,9 @@ console.log(this.props)
 			<div className='appointments'>
 			
 		
-				<h4>Your next appointment is with {this.props.info.nextPhysician}</h4>
-				<p>Please come back on {this.props.info.nextCheckUp} at least 15 minutes before {this.props.info.nextTime} to ensure that all the paperwork or necessary work is done before the appointment.</p>
-				<p>The reason for your next visit is: {this.props.info.nextReason}.</p>
+				<h4>Your next appointment is with {this.props.info.Physician}</h4>
+				<p>Please come back on {this.props.info.CheckUp} at least 15 minutes before {this.props.info.Time} to ensure that all the paperwork or necessary work is done before the appointment.</p>
+				<p>The reason for your next visit is: {this.props.info.Reason}.</p>
 			</div>
 		)
 	}
