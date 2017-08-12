@@ -20,7 +20,7 @@ class App extends React.Component {
         picture: null, // would need to pull picture from database
         age: '21',
         weight: '160 lbs',
-        
+        lastCheckUp: '6/12/17'
       }
     }
   }

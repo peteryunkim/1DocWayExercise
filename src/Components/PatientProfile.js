@@ -4,7 +4,7 @@ function PatientProfile(props) {
 
 		return (
 		<div className='profile'>
-			<img src="../../public/JessePinkman.jpg"></img>
+			<img className='patient-picture'src={require('../img/JP.jpg')} alt='patient' height='250px' width='auto'/>
 			<p>Welcome back, {props.patient.name}! </p>
 			<p>You are a patient of {props.patient.physicianName}</p>
 			<p>You were last seen on {props.patient.lastCheckUp}</p>

@@ -43,7 +43,6 @@ class PreviousAppointment extends React.Component{
           onRequestClose={this.closeModal.bind(this)}
           style={customStyles}
         >
-
           <button className="btn btn-default" onClick={this.closeModal.bind(this)}>x</button>
           <p>The physician you saw was {this.props.info.Physician}.</p>
           <p>The reason for your visit was {this.props.info.Reason}.</p>

@@ -1,9 +1,7 @@
 import React from 'react'
-import AppointmentInfo from '../Components/AppointmentInfo'
-import {getPatientAppt} from '../ApiCalls/ApiFunctions'
+import FutureAppointment from '../Components/FutureAppointment'
+// import {getPatientAppt} from '../ApiCalls/ApiFunctions'
 import PreviousAppointment from '../Components/PreviousAppointment'
-
-//Container used so that if the pt has multiple appointments, the AppointmentInfo Component can be reused
 
 
 class AppointmentContainer extends React.Component{
@@ -32,12 +30,14 @@ class AppointmentContainer extends React.Component{
 					next: [
 						{
 		          Physician: 'Dr. FeelBetter, M.D.',
+		          PhysicianID: 1,
 							CheckUp: '6/12/2018',
 		          Time: '10am',
 		          Reason: 'yearly physical'
 						},
 						{
 		          Physician: 'Dr. Footman, M.D.',
+		          PhysicianID: 2,
 							CheckUp: '6/27/2018',
 		          Time: '10am',
 		          Reason: 'foot pain'
@@ -63,7 +63,7 @@ class AppointmentContainer extends React.Component{
 					{this.state.fakeAppt.previous.map( el => <PreviousAppointment info={el}/>)}
 					
 					<h1> Next Appointments</h1>
-					{this.state.fakeAppt.next.map (el => <AppointmentInfo info={el}/>)}
+					{this.state.fakeAppt.next.map (el => <FutureAppointment info={el}/>)}
 				</div>
 			)
 			
