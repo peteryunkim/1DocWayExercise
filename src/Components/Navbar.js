@@ -1,10 +1,21 @@
 import React from 'react'
-
+//Navbar with links to different parts for the patient
 function Navbar(){
 	return(
-		<div>
-		Navbar - My Doctors - My Medications - My Insurance - My Health Record - My Messages - Logout
-		</div>
+		<nav className="navbar navbar-default">
+		  <div className="container-fluid">
+		    <div className="navbar-header">
+		        <ul className="nav nav-tabs">
+						  <li role="presentation"><a href="#">My Profile</a></li>
+						  <li role="presentation"><a href="#">My Doctors</a></li>
+						  <li role="presentation"><a href="#">My Medications</a></li>
+						  <li role="presentation"><a href="#">My Insurance</a></li>
+						  <li role="presentation"><a href="#">My Health Record</a></li>
+						  <li role="presentation"><a href="#">My Messages</a></li>
+						</ul>
+		    </div>
+		  </div>
+		</nav>
 	)
 }
 

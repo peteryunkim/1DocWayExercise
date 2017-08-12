@@ -1,15 +1,19 @@
 import React from 'react'
 import AppointmentInfo from '../Components/AppointmentInfo'
 import {getPatientAppt} from '../ApiCalls/ApiFunctions'
+import PreviousAppointment from '../Components/PreviousAppointment'
 
 //Container used so that if the pt has multiple appointments, the AppointmentInfo Component can be reused
 
+
 class AppointmentContainer extends React.Component{
+
 		constructor(){
 			super()
 			this.state={
+				//this would populate with the API call for pt appointment
 				appt: null,
-				//fake appt
+				//fake appointmentt
 				fakeAppt: { 
 					previous: [
 						{
@@ -56,7 +60,8 @@ class AppointmentContainer extends React.Component{
 			return (
 				<div>
 					<h1> Previous Appointments </h1>
-					{this.state.fakeAppt.previous.map( el => <p>{el.CheckUp}</p>)}
+					{this.state.fakeAppt.previous.map( el => <PreviousAppointment info={el}/>)}
+					
 					<h1> Next Appointments</h1>
 					{this.state.fakeAppt.next.map (el => <AppointmentInfo info={el}/>)}
 				</div>
@@ -66,3 +71,5 @@ class AppointmentContainer extends React.Component{
 }
 
 export default AppointmentContainer
+
+
