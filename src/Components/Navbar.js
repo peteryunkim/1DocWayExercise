@@ -12,6 +12,7 @@ function Navbar(){
 						  <li role="presentation"><a>My Insurance</a></li>
 						  <li role="presentation"><a>My Health Record</a></li>
 						  <li role="presentation"><a>My Messages</a></li>
+						  <li role="presentation"><a>Logout</a></li>
 						</ul>
 		    </div>
 		  </div>
