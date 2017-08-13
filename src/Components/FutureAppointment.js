@@ -44,8 +44,8 @@ render(){
 					<Popover placement='Right' isOpen={this.state.popoverOpen} target={'Popover-' + this.props.info.PhysicianID} toggle={this.toggle}>
 					<PopoverTitle>{this.props.info.Physician}</PopoverTitle>
 					<PopoverContent>
-						<img src={'this.state.fakePhysicianInfo.photo'} alt='physician'/>
-						<p>Name: {this.state.fakePhysicianInfo.name}</p>
+						<img src={require('../img/phys1.jpeg')} alt='physician' height='150px'/>
+						<p>Name: {this.props.info.Physician}</p>
 						<p>Specialty: {this.state.fakePhysicianInfo.specialty}</p>
 						<p>Education: {this.state.fakePhysicianInfo.education}</p>
 					</PopoverContent>
