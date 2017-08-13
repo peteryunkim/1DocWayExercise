@@ -36,7 +36,7 @@ class PreviousAppointment extends React.Component{
 
 		return(
 			<div>
-				<a href="#"onClick={this.openModal.bind(this)}>{this.props.info.CheckUp}</a>
+				<a onClick={this.openModal.bind(this)}>{this.props.info.CheckUp}</a>
 				<Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

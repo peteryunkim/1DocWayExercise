@@ -6,12 +6,12 @@ function Navbar(){
 		  <div className="container-fluid">
 		    <div className="navbar-header">
 		        <ul className="nav nav-tabs">
-						  <li role="presentation"><a href="#">My Profile</a></li>
-						  <li role="presentation"><a href="#">My Doctors</a></li>
-						  <li role="presentation"><a href="#">My Medications</a></li>
-						  <li role="presentation"><a href="#">My Insurance</a></li>
-						  <li role="presentation"><a href="#">My Health Record</a></li>
-						  <li role="presentation"><a href="#">My Messages</a></li>
+						  <li role="presentation"><a>My Profile</a></li>
+						  <li role="presentation"><a>My Doctors</a></li>
+						  <li role="presentation"><a>My Medications</a></li>
+						  <li role="presentation"><a>My Insurance</a></li>
+						  <li role="presentation"><a>My Health Record</a></li>
+						  <li role="presentation"><a>My Messages</a></li>
 						</ul>
 		    </div>
 		  </div>

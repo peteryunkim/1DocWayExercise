@@ -1,21 +1,62 @@
 import React from 'react'
-import ReactTooltip from 'react-tooltip'
+// import {getPhysicianInfo} from '../ApiCalls/ApiFunction'
+import { Popover, PopoverTitle, PopoverContent } from 'reactstrap';
 
-
-function FutureAppointment(props){
-
-	const getPhysicianInfo = (props) => {
-		console.log(props)
+class FutureAppointment extends React.Component{
+	constructor(){
+		super()
+		this.state={
+			popoverOpen: false,
+			//physician info populated by API call
+			physicianInfo: null,
+			fakePhysicianInfo: 
+			{
+				name: 'Dr. Health',
+				photo: null,
+				specialty: 'Internal Medicine',
+				education: 'University of Health'
+			}
+		}
+		this.toggle = this.toggle.bind(this)
 	}
 
+	componentDidMount(){
+		// retrieve physician info from API
 
+		// getPhysicianInfo(this.props.infor.PhysicianID)
+		// .then(res => this.setState({
+		// 	physicianInfo: res
+		// }))
+	}
+
+	toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
+    console.log('toggled')
+  }
+
+render(){
 		return(
 			<div className='appointments'>
-				<h4>You have an appointment with <span onMouseOver={()=>getPhysicianInfo(props.info.Physician)}>{props.info.Physician}</span></h4>
-				<p>Please come back on {props.info.CheckUp} at least 15 minutes before {props.info.Time} to ensure that all the paperwork or necessary work is done before the appointment.</p>
-				<p>The reason for your next visit is: {props.info.Reason}.</p>
+				<h4>You have an appointment with 
+					<a id={'Popover-' + this.props.info.PhysicianID} onMouseOver={this.toggle}> {this.props.info.Physician}</a>
+					<Popover placement='Right' isOpen={this.state.popoverOpen} target={'Popover-' + this.props.info.PhysicianID} toggle={this.toggle}>
+					<PopoverTitle>{this.props.info.Physician}</PopoverTitle>
+					<PopoverContent>
+						<img src={'this.state.fakePhysicianInfo.photo'} alt='physician'/>
+						<p>Name: {this.state.fakePhysicianInfo.name}</p>
+						<p>Specialty: {this.state.fakePhysicianInfo.specialty}</p>
+						<p>Education: {this.state.fakePhysicianInfo.education}</p>
+					</PopoverContent>
+					</Popover>
+					
+				</h4>
+				<p>Please come back on {this.props.info.CheckUp} at least 15 minutes before {this.props.info.Time} to ensure that all the paperwork or necessary work is done before the appointment.</p>
+				<p>The reason for your next visit is: {this.props.info.Reason}.</p>
 			</div>
 		)
+	}
 }
 
 export default FutureAppointment
