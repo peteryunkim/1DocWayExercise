@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar'
 import PatientProfile from './Components/PatientProfile'
 import AppointmentContainer from './Containers/AppointmentContainer'
-// import {getPatientInfo} from './ApiCalls/ApiFunctions'
+// import {getPatientInfo} from './ApiCalls/ApiFunctions' - used in componentDidMount
 
 class App extends React.Component {
   constructor(){
@@ -12,7 +12,7 @@ class App extends React.Component {
       //real patient - PatientProfileContainer would use this in a real app but because no population,
       // we will use fake patient to pass down into container
       patient: null,
-      //fake patient
+      //fake patient - used for demonstration purposes
       fakePatient: {
         name: 'PK',
         ID: 12323,
