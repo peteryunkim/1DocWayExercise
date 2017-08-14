@@ -38,23 +38,21 @@ class FutureAppointment extends React.Component{
 
 render(){
 		return(
-			<div className='appointments'>
-				<h4>You have an appointment with 
-					<a id={'Popover-' + this.props.info.PhysicianID} onMouseOver={this.toggle}> {this.props.info.Physician}</a>
-					<Popover placement='Right' isOpen={this.state.popoverOpen} target={'Popover-' + this.props.info.PhysicianID} toggle={this.toggle}>
-					<PopoverTitle>{this.props.info.Physician}</PopoverTitle>
-					<PopoverContent>
-						<img src={require('../img/phys1.jpeg')} alt='physician' height='150px'/>
-						<p>Name: {this.props.info.Physician}</p>
-						<p>Specialty: {this.state.fakePhysicianInfo.specialty}</p>
-						<p>Education: {this.state.fakePhysicianInfo.education}</p>
-					</PopoverContent>
-					</Popover>
-					
-				</h4>
-				<p>Please come back on {this.props.info.CheckUp} at least 15 minutes before {this.props.info.Time} to ensure that all the paperwork or necessary work is done before the appointment.</p>
-				<p>The reason for your next visit is: {this.props.info.Reason}.</p>
-			</div>
+		  <tr>
+		    <td className='physician-name' id={'Popover-' + this.props.info.PhysicianID} onMouseOver={this.toggle} onMouseLeave={this.toggle}> {this.props.info.Physician} </td>
+		    <td> {this.props.info.CheckUp} </td> 
+		    <td> {this.props.info.Reason} </td>
+
+				<Popover placement='top' isOpen={this.state.popoverOpen} target={'Popover-' + this.props.info.PhysicianID} toggle={this.toggle}>
+				<PopoverTitle>{this.props.info.Physician}</PopoverTitle>
+				<PopoverContent>
+					<img src={require('../img/phys1.jpeg')} alt='physician' height='150px'/>
+					<p>Name: {this.props.info.Physician}</p>
+					<p>Specialty: {this.state.fakePhysicianInfo.specialty}</p>
+					<p>Education: {this.state.fakePhysicianInfo.education}</p>
+				</PopoverContent>
+				</Popover>
+		  </tr>
 		)
 	}
 }

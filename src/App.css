@@ -9,7 +9,17 @@
 	border-radius: 25px;
 
 }
+table, th, td {
+	margin: 0 auto;
+	border: 1px solid black;
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
 
-#popup{
-	display: none;
+.previous-dates{
+	cursor: pointer;
+}
+.physician-name{
+	cursor: pointer;
 }

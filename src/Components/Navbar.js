@@ -1,5 +1,7 @@
 import React from 'react'
+
 //Navbar with links to different parts for the patient
+
 function Navbar(){
 	return(
 		<nav className="navbar navbar-default">

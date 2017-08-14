@@ -2,7 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+ReactDOM.render(
+	<App />, document.getElementById('root')
+);
+
+
+//Attempting to implement Redux
+
+// import createStore from './createStore'
+// import {fetchPatientInfo} from './Reducers/patientPortal'
+
+// const store = createStore(fetchPatientInfo)
+
+
+// export function render(){
+// 	ReactDOM.render(
+// 		<App store={store}/>, 
+// 		document.getElementById('root')
+// 	);
+// }
+
+// store.dispatch({type:'@@INIT'})
