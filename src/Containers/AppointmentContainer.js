@@ -59,10 +59,10 @@ class AppointmentContainer extends React.Component{
 		render(){
 			return (
 				<div>
-					<h1> Previous Appointments </h1>
-					<div className='container'>
+					<div className='prev'>
+						<h1> Previous Appointments </h1>
 						{this.state.fakeAppt.previous.map( el => <PreviousAppointment info={el}/>)}
-					</div>
+					</div>		
 					<h1> Next Appointments </h1>
 					<table className='appointment-table'>
 					  <tr>

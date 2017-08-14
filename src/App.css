@@ -3,11 +3,16 @@
   	/*background-color: gray;*/
   	padding-top: 15px;
   	padding-bottom: 15px;
+  	border-bottom: 1px solid black;
 }
 
 .patient-picture{
 	border-radius: 25px;
 
+}
+.prev{
+	padding-bottom: 10px;
+	border-bottom: 1px solid black;
 }
 table, th, td {
 	margin: 0 auto;

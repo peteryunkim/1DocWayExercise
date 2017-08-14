@@ -36,7 +36,7 @@ class PreviousAppointment extends React.Component{
 	render(){
 
 		return(
-			<div >
+			<div className='container'>
 				<a className='previous-dates' onClick={this.openModal.bind(this)}>{this.props.info.CheckUp}</a>
 				<Modal
           isOpen={this.state.modalIsOpen}
