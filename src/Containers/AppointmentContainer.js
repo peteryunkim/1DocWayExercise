@@ -1,7 +1,7 @@
 import React from 'react'
 import FutureAppointment from '../Components/FutureAppointment'
 import PreviousAppointment from '../Components/PreviousAppointment'
-// import {getPatientAppt} from '../ApiCalls/ApiFunctions'
+// import {getPatientAppt} from '../ApiCalls/ApiFunctions' - used in componentDidMount
 
 
 class AppointmentContainer extends React.Component{
@@ -11,7 +11,7 @@ class AppointmentContainer extends React.Component{
 			this.state={
 				//this would populate with the API call for pt appointment
 				appt: null,
-				//fake appointmentt
+				//fake appointment for demonstration purposes
 				fakeAppt: { 
 					previous: [
 						{
@@ -61,7 +61,7 @@ class AppointmentContainer extends React.Component{
 				<div>
 					<h1> Previous Appointments </h1>
 					<div className='container'>
-					{this.state.fakeAppt.previous.map( el => <PreviousAppointment info={el}/>)}
+						{this.state.fakeAppt.previous.map( el => <PreviousAppointment info={el}/>)}
 					</div>
 					<h1> Next Appointments </h1>
 					<table className='appointment-table'>
@@ -70,8 +70,7 @@ class AppointmentContainer extends React.Component{
 					    <th> Date </th> 
 					    <th> Reason </th>
 					  </tr>
-					{this.state.fakeAppt.next.map (el => <FutureAppointment info={el}/>)}
-					  
+						{this.state.fakeAppt.next.map (el => <FutureAppointment info={el}/>)}
 					</table>
 					<h4>NOTE: Please come in at least 15 minutes before your appointment to ensure that all the paperwork or necessary work is done before the appointment.</h4>
 				</div>

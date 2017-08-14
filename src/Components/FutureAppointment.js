@@ -1,5 +1,5 @@
 import React from 'react'
-// import {getPhysicianInfo} from '../ApiCalls/ApiFunction'
+// import {getPhysicianInfo} from '../ApiCalls/ApiFunction' - used in componentDidMount
 import { Popover, PopoverTitle, PopoverContent } from 'reactstrap';
 
 class FutureAppointment extends React.Component{
@@ -9,6 +9,7 @@ class FutureAppointment extends React.Component{
 			popoverOpen: false,
 			//physician info populated by API call
 			physicianInfo: null,
+			//fake physician used for demonstration purposes
 			fakePhysicianInfo: 
 			{
 				name: 'Dr. Health',
@@ -21,7 +22,7 @@ class FutureAppointment extends React.Component{
 	}
 
 	componentDidMount(){
-		// retrieve physician info from API
+		// retrieve physician info from API for each individual physician
 
 		// getPhysicianInfo(this.props.infor.PhysicianID)
 		// .then(res => this.setState({

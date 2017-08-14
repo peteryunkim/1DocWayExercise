@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from 'react-modal'
 
 const customStyles = {
+	//custom styling used for the modal
 	  content : {
 	    top                   : '50%',
 	    left                  : '50%',
