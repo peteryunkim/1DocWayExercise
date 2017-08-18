@@ -3,7 +3,6 @@ import FutureAppointment from '../Components/FutureAppointment'
 import PreviousAppointment from '../Components/PreviousAppointment'
 // import {getPatientAppt} from '../ApiCalls/ApiFunctions' - used in componentDidMount
 
-
 // class AppointmentContainer extends React.Component{
 
 // 		constructor(){
